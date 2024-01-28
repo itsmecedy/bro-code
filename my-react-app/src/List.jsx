@@ -1,20 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function list(props) {
-  const category = props.category;
-  const itemList = props.items;
-
-  const listItems = itemList.map((item) => (
-    <li key={item.id}>
-      {item.name}: &nbsp; 
-      <b>{item.calories}</b>
-    </li>
-  ));
+  const [color, setColor] = useState("#FFFFFF");
+  function handleColorChange(event) {
+    setColor(event.target.value);
+  }
 
   return (
     <>
-      <h3 className="list-category">{category}</h3>
-      <ol className="list-items">{listItems}</ol>
+      <div className="color-picker-container">
+        <h1>Color Picker</h1>
+        <div className="color-display" style={{ backgroundColor: color }}>
+          <p>Selected Color: {color}</p>
+        </div>
+        <label htmlFor="color">Select a Color: </label>
+        <input type="color" value={color} onChange={handleColorChange} />
+      </div>
     </>
   );
 }
