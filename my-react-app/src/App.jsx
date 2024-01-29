@@ -1,9 +1,11 @@
-import ColorPicker from "./ColorPicker";
+import Button from "./Button";
+// import ColorPicker from "./ColorPicker";
 
 function App() {
   return (
     <>
-      <ColorPicker />
+      {/* <ColorPicker /> */}
+      <Button />
     </>
   );
 }
