@@ -1,10 +1,12 @@
 import React from "react";
 
 export default function Button() {
-  const handleClick = () => console.log("ouch");
+  const imageUrl = "./src/assets/profile.jpg";
+
+  const handleClick = (e) => (e.target.style.display = "none");
   return (
     <div>
-      <button onClick={handleClick}>Ouch</button>
+      <img onClick={(e) => handleClick(e)} src={imageUrl} />
     </div>
   );
 }
