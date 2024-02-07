@@ -26,7 +26,6 @@ export default function MyComponent() {
       <input type="text" value={car.make} onChange={handleMakeChange} />
       <br />
       <input type="text" value={car.model} onChange={handleMode1Change} />
-      <br />
     </div>
   );
 }
